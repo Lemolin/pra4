@@ -8,7 +8,14 @@
         string substring;
 
         for(size_t i = 1; i <= s2.size(); i++) {
+            if(substring.length()==0){
+                
             substring += s2[i - 1];
+            }
+            
+            else{
+                substring += ' '+s2[i - 1];
+            }
             size_t found = s1.find(substring);
             if (found != string::npos) {
                 result.push_back(found);
